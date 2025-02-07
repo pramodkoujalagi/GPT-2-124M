@@ -142,7 +142,7 @@ class GPT(nn.Module):
         }[model_type]
         config_args['vocab_size'] = 50257 # always 50257 for GPT model checkpoints
         config_args['block_size'] = 1024 # always 1024 for GPT model checkpoints
-        # create a from-scratch initialized minGPT model
+        # create from-scratch initialized minGPT model
         config = GPTConfig(**config_args)
         model = GPT(config)
         sd = model.state_dict()
